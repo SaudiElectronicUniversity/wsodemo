@@ -1,0 +1,55 @@
+﻿@model Wso2MvcDemo.Models.ProfileViewModel
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<h2>User Profile</h2>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h4>User Claims</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Claim Type</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.UserClaims != null)
+                {
+                    @foreach (var claim in Model.UserClaims)
+                    {
+                        <tr>
+                            <td>@claim.Type</td>
+                            <td>@claim.Value</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h4>Access Token</h4>
+        <div class="card">
+            <div class="card-body">
+                <code style="word-break: break-all;">@Model.AccessToken</code>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h4>ID Token</h4>
+        <div class="card">
+            <div class="card-body">
+                <code style="word-break: break-all;">@Model.IdToken</code>
+            </div>
+        </div>
+    </div>
+</div>
+

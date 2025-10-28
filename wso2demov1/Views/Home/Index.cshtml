@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to WSO2 Integration Demo</h1>
+    <p class="lead">ASP.NET Core MVC .NET 9 with WSO2 Identity Server</p>
+
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <div class="alert alert-success mt-4">
+            <h4>Welcome, @User.Identity.Name!</h4>
+            <p>You are successfully authenticated with WSO2 Identity Server.</p>
+            <a asp-controller="Home" asp-action="Profile" class="btn btn-primary">View Profile</a>
+        </div>
+    }
+    else
+    {
+        <div class="mt-4">
+            <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg">
+                Login with WSO2
+            </a>
+        </div>
+    }
+</div>
