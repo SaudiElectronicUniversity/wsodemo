@@ -1,0 +1,314 @@
+﻿select * from base_clos c where name like '%CLO1%'
+select * from base_clos_plos where clos_code in(select code from base_clos c where name like '%CLO1%')
+select * from base_clos c where name like '%Explain The Practical Issues%'
+select * from base_clos_plos where clos_code in(select code from base_clos c where name like  '%Explain The Practical Issues%')
+--delete from base_clos_plos where clos_code =' ISLM102.5'
+
+--delete from base_clos where code =' ISLM102.5' and learing_area_code ='V'
+--delete  from base_clos where code =' ISLM102.4' and learing_area_code ='S'
+
+
+--delete from base_clos where name ='CLO1' and code='MTT.K1'
+--delete  from base_clos where name ='Explain the practical issues the role of the proofreader encounters in the process of generating a document for a particular client or end user. ' and code='TRA600'
+select * from [dbo].[courseCoord]
+
+ select * from [dbo].base_clos where name  ='Describe key characteristics among the various market structures of perfect and imperfect Market.' and code = 'ECN101.1'
+ delete from [dbo].base_clos where name  ='Describe key characteristics among the various market structures of perfect and imperfect Market.' and code = 'ECN101.1'
+
+select * from [dbo].base_clos where name like '%Describe key%'
+select * from [dbo].[v_base_crn_v] where full_name_english =
+SELECT *
+FROM [dbo].[bas_course_coordinators] c
+JOIN [dbo].[com_users] u ON c.coordinator_id = u.id
+WHERE 
+    (course_code = 'DS350' AND term_code = '202310') OR
+    (course_code = 'IT342' AND term_code = '202310') OR
+    (course_code = 'IT353' AND term_code = '202310') OR
+    (course_code = 'IT407' AND term_code = '202310') OR
+    (course_code = 'DS231' AND term_code = '202410') OR
+    (course_code = 'DS352' AND term_code = '202410') OR
+    (course_code = 'IT352' AND term_code = '202410') OR
+    (course_code = 'IT487' AND term_code = '202410') OR
+    (course_code = 'CS240' AND term_code = '202420') OR
+    (course_code = 'CS243' AND term_code = '202420') OR
+    (course_code = 'DS240' AND term_code = '202420') OR
+    (course_code = 'IT231' AND term_code = '202420') OR
+    (course_code = 'IT401' AND term_code = '202420') order by course_code
+
+
+    /////////////////////////////////////////////////////
+
+
+    SELECT *
+FROM com_users
+WHERE Email IN (
+	'a.almasoud@seu.edu.sa'
+   
+);
+select * from com_users where UserName like'%a.heshmat%'
+select * 
+FROM com_users
+WHERE 
+ email LIKE '%I.ALQASMI%'	or
+    email LIKE '%m.abaoud%' OR
+    email LIKE '%a.alomair%' OR
+    email LIKE '%a.alqahtani%' OR
+    email LIKE '%fan.almutairi%' OR
+    email LIKE '%a.almuhammad%' OR
+    email LIKE '%a.alyamani%' OR
+    email LIKE '%h.alrasdi%' OR
+    email LIKE '%m.almusawa%' OR
+    email LIKE '%b.qwaid%' OR
+    email LIKE '%a.albidah%' OR
+    email LIKE '%as.algarni%' OR
+    email LIKE '%es.alzahrani%' OR
+    email LIKE '%ia.alqahtani%';
+select * from [dbo].[vv_base_courses]  where code ='HCM501'
+
+select * from [dbo].[tb_base_courses] where code ='HCM501'
+select * from [dbo].[tb_base_departments]
+select * from [dbo].[course_files] where course_code ='HCM501'
+select * from [dbo].[cs_course_specfication] where course_code ='HCM501'
+
+/////////////////////////////////////////////////////////////////////////////
+
+Select  * from [dbo].[base_courses] where Code ='CS479'
+
+Select  * from [dbo].[base_courses] where Code ='CS475'
+
+select * from [dbo].[v_base_crn_v] where code ='21048' and term_code =202420
+Select  * from [dbo].[base_courses] where Code ='CS230'
+
+select * from [dbo].[base_courses] WHERE code='HCM501' 
+
+--update  [dbo].[base_courses] set DepartmentCode ='PH' WHERE code='HCM501' 
+select * from [dbo].[base_departments]
+select * from 
+[dbo].[v_base_crn_v] crn,[dbo].[base_courses]  cr  ,[dbo].[base_departments] d
+where cr.title_english ='Object Oriented Programming' and crn.term_code ='202420'  and d.TitleEnglish ='Information Technology'
+and crn.course_code =cr.code and cr.DepartmentCode = d.Code
+and cr.code ='CS230'
+
+select * from c   where code ='21548' and term_code ='202420'
+select * from [dbo].[v_base_crn_v]   where code ='22679' and term_code ='202420'
+[dbo].[tb_base_crn][dbo].[ps-approveHistory][dbo].[ps_approves]
+
+
+select * from [dbo].[v_base_crn_v] where full_name_english ='%Describe key characteristics among the various market structures%'
+select * from [dbo].[cr_approves] where course_report_id = '31988' or course_report_id ='32279'
+
+select * from [dbo].[cr_course_Report] where CrnCode ='22679' or CrnCode ='21548'
+select * from [dbo].[base_department_chiefs]
+Select  * from [dbo].[base_courses] where Code ='Project Management in Computing'
+select * from [dbo].[v_base_crn_v]   where course_code in (
+
+'CS231',
+'CS480',
+'CS480',
+'DS353',
+'IT233',
+'IT362',
+'IT362',
+'CYS49',
+'DS350',
+'DS361',
+'DS474',
+'IT244',
+'IT244',
+'IT244',
+'IT475',
+'IT270'
+) and code in(
+'11043',
+'12124',
+'12154',
+'10700',
+'10564',
+'11941',
+'16671',
+'24548',
+'21081',
+'21546',
+'21922',
+'22316',
+'22317',
+'23006',
+'21977',
+'24363'
+
+)
+
+select * from [dbo].[v_base_crn_v]
+select * from [dbo].[base_crn]
+select * [dbo].[base_departments]
+--Update  [dbo].[base_courses] set title_english='Quality and Patient Safety',title_arabic =' الجودة و سلامة المرضى' where Code ='HCM520'
+///////////////////////////////////////////////////////////////
+
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [Id]
+      ,[Key]
+      ,[Value]
+      ,[Domain]
+      ,[ValueArabic]
+  FROM [net.ysolution.accreditation2.v2].[dbo].[com_commons] where Domain ='activities'
+
+
+
+  select * from [dbo].[cs_actual_learning_hours] where Activity ='Others'
+
+
+  ///////////////////////////////////////////////////
+
+  
+select Email from com_users  Group by Email Having count(Email) >1 
+
+select * from com_first_login_check where user_Id in ('c04ded48-c303-4b36-8eee-fbb9b4e17453',
+ 'f13fd0fa-450c-4f11-8c5f-e080fe5bb1ae')
+select* from com_users  where Email ='d.aldailami@seu.edu.sa' 
+or email = 'D.Aldailami@seu.edu.sa'
+SELECT 
+    LOWER(SUBSTRING(UserName, 
+        CHARINDEX('/', UserName) + 1, 
+        CHARINDEX('@', UserName) - CHARINDEX('/', UserName) - 1)) AS CleanUserName,
+    COUNT(*) AS CountPerUser
+FROM com_users
+GROUP BY 
+    LOWER(SUBSTRING(UserName, 
+        CHARINDEX('/', UserName) + 1, 
+        CHARINDEX('@', UserName) - CHARINDEX('/', UserName) - 1))
+select* from com_users  where username like '%d.aldailami%'
+SELECT * 
+FROM com_users 
+WHERE Email in (
+   
+'R.alnafrani@seu.edu.sa ',
+'M.ALALWANI@seu.edu.s')
+SELECT * 
+FROM com_users 
+WHERE 
+    UserName LIKE '%R.alnafrani%' OR
+    UserName LIKE '%M.ALALWANI%' 
+ 
+
+select LOWER(Email) from com_users group by LOWER(Email) having count(LOWER(Email))>1
+SELECT *
+FROM com_users
+WHERE LOWER(Email) <> LOWER(NormalizedEmail);
+ select *  from com_user_roles where userid in ('f13fd0fa-450c-4f11-8c5f-e080fe5bb1ae')
+select* from com_users  where  UserName not like 'SEUCONN%'
+
+
+select * from com_users where UserName in('hm.almutairi@seu.edu.sa')
+select * from com_users where UserName like'%hm.almutairi%'
+
+select * from com_user_roles where UserId ='e6a96f4f-b33e-4dcb-9d52-841f4c22eb39'
+select * from com_users where UserName like'%a.aldawoud%' or username like '%d.aldailami%'
+
+			--UPDATE com_users
+			--SET 
+			--    UserName = 'SEUCONN/' + LEFT(UserName, CHARINDEX('@', UserName) - 1) + '@carbon.super',
+			--    NormalizedUserName = LEFT(NormalizedUserName, CHARINDEX('@', NormalizedUserName) - 1) + '@CARBON.SUPER'
+			--WHERE id in(
+			--'6010145d-cb5b-46af-a94f-14ef5477d939'
+			--)
+
+
+--UPDATE com_users
+--SET 
+--    UserName = 'SEUCONN/' + LEFT(UserName, CHARINDEX('@', UserName) - 1) + '@carbon.super',
+--    NormalizedUserName = LEFT(NormalizedUserName, CHARINDEX('@', NormalizedUserName) - 1) + '@CARBON.SUPER'
+--WHERE UserName not like 'SEUCONN%'
+
+--update  com_user_roles set UserId ='1282c8a1-9798-457b-84c7-375080fa1d91' where userId ='f1551a5c-e894-4ba3-97dd-751ae5fbf1ab'
+--update com_users set UserName ='SEUCONN/A.HESHMAT@carbon.super' ,NormalizedUserName ='A.HESHMAT@carbon.super' where email = 'a.heshmat@seu.edu.sa'
+
+
+
+
+select * from base_clos c , 
+    base_clos_plos  b
+where c.code  COLLATE Latin1_General_BIN = b.clos_code COLLATE Latin1_General_BIN 
+and   c.course_code  COLLATE Latin1_General_BIN  = 'ACCT101'
+
+select * from base_terms where code ='202420'
+select * from cs_course_specfication where  course_code = 'IT352'
+select top 1000 * from [dbo].[cr_skills] where clos_code like '%ACCT101%'
+select * from base_clos where    course_code like '%ISLAM102%'
+select * from [dbo].[cs_course_specfication]where course_title_arabic like '%أن يصف الطالب أخل%'
+
+select * from base_clos c where name like '%أن يصف الطالب أخل%'
+
+select * from base_clos c where name like '%أن يشرح الطالب وسائل اكتساب%'
+--delete from base_clos where code ='rrrrrrrrrr'
+select * from base_clos c inner join 
+    base_clos_plos  b
+	on c.code = b.clos_code where  b.clos_code like '%ACCT101%'
+select * from   base_clos c where  c.course_code  COLLATE Latin1_General_BIN  = 'ACCT101'
+SELECT 
+    CASE WHEN 'CS352' COLLATE Latin1_General_BIN = 'CS352 ' COLLATE Latin1_General_BIN 
+         THEN 'Equal' ELSE 'Not Equal' END AS ComparisonResult;
+select * from [dbo].[cs_knowledgeAssmentMethod]
+SELECT 
+    CASE WHEN 'CS352' = ' CS352' THEN 'Equal' ELSE 'Not Equal' END AS ComparisonResult
+select * from base_clos where    course_code = 'CS231'
+
+  select c.code,c.DepartmentCode,c.title_english from base_departments d 
+join base_courses c on d.code=c.[DepartmentCode]
+where d.college_code='UG' and c.code='CS352'
+select * from [dbo].[pr_learning_outcomes_analysis]
+select * from base_departments d where d.college_code='HS'
+
+select Max(college_code),COUNT(college_code)  from base_departments
+group by college_code 
+Having COUNT(college_code) >1
+
+select * from  [dbo].[v_base_crn_v]  where Code =27375
+select * from [dbo].[base_crn] where Code =27375
+select * from [dbo].[base_crn1] where Code =27375
+
+select * from   [dbo].[tb_base_crn]
+
+
+select Max(Code),COUNT(Code)  from base_departments
+group by Code 
+Having COUNT(Code) >1
+select * from base_clos where    course_code like  '%HCM501%'
+
+select * from [dbo].[v_cr_grades] 
+where course_code ='IT233' and term_code ='202420' and crn_code ='21569'
+
+
+select * from [dbo].[v_cr_grades] 
+where course_code ='IT489' and term_code ='202420' and crn_code ='16774'
+select* from com_users  where Email ='m.mary@seu.edu.sa'
+
+select * from com_user_roles where UserId in (
+'026B832E-7F7F-4DBB-905C-C6638777BE70',
+'07b90d08-52a4-45b7-a502-050289a8735f'
+)
+select * from bas_course_coordinators where coordinator_id in
+(
+'92c92576-4796-47be-9916-ec7091d049d5',
+'be651f7f-458d-4134-965f-3f8c28558334',
+'026B832E-7F7F-4DBB-905C-C6638777BE70',
+'07b90d08-52a4-45b7-a502-050289a8735f'
+)
+select * from com_user_roles where UserId in (
+'92c92576-4796-47be-9916-ec7091d049d5',
+'be651f7f-458d-4134-965f-3f8c28558334',
+'026B832E-7F7F-4DBB-905C-C6638777BE70',
+'07b90d08-52a4-45b7-a502-050289a8735f'
+)
+select* from com_users  where username like '%d.aldailami%'
+select* from com_users  where username like '%m.mary%'
+--UPDATE com_users
+--SET 
+--    UserName = 'm-mary',
+--    NormalizedUserName = 'm-mary',
+--    Email = 'm-mary',
+--    NormalizedEmail = 'm-mary'
+--WHERE id = '07b90d08-52a4-45b7-a502-050289a8735f'
+
+select  coordinator_id from bas_course_coordinators  where coordinator_id not in 
+(select Id from com_users )
+--update base_clos set course_code  where     code like  '%ENG211%' 
